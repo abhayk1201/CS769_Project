@@ -8,6 +8,8 @@ If running on Google Colab, just install the python packages using
 `pip install -r requirements.txt`
 
 Pre-requisites: 
+python 3.7
+pytorch
 `setup.sh` will install the `goemotion` environment with required python packages.
 
 
@@ -28,3 +30,15 @@ wget -P data/full_dataset/ https://storage.googleapis.com/gresearch/goemotions/d
 wget -P data/full_dataset/ https://storage.googleapis.com/gresearch/goemotions/data/full_dataset/goemotions_3.csv
 ```
 
+## Geomotion Data Hierarchial grouping
+ * **Original GoEmotions** (27 emotions + neutral)
+ * **Sentiment Grouping** (positive, negative, ambiguous + neutral)
+ * **Ekman** (anger, disgust, fear, joy, sadness, surprise + neutral)
+ anger : anger, annoyance, disapproval, 
+ disgust : disgust,
+ fear : fear, nervousness, 
+ joy : all positive emotions, 
+ sadness : sadness, disappointment, embarrassment, grief, remorse 
+ surprise : all ambiguous emotions
+
+`Config` directory has the respecttive config files for above groupings/taxonomy.
