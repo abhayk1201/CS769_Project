@@ -1,8 +1,8 @@
 {
   "task": "goemotions",
-  "data_dir": "data/group",
-  "ckpt_dir": "ckpt/group",
-  "output_dir": "bert-base-cased-goemotions-group",
+  "data_dir": "data/sentiment",
+  "ckpt_dir": "ckpt/sentiment",
+  "output_dir": "bert-base-cased-goemotions-sentiment",
   "train_file": "train.tsv",
   "dev_file": "dev.tsv",
   "test_file": "test.tsv",
