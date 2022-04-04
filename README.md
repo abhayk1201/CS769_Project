@@ -1,5 +1,5 @@
 # CS769_Project
-Course Project for CS769: Advanced Natural Language Processing
+Course Project for [CS769: Advanced Natural Language Processing](https://junjiehu.github.io/cs769-spring22/)
 
 Team Members: [Abhay Kumar](https://abhayk1201.github.io/), Neal B Desai, Priyavarshini Murugan
 
@@ -58,4 +58,5 @@ $ python3 goemotions_classifier.py --taxonomy ekman
 
 ## References
 [Awesome Multi-Task Learning](https://github.com/Manchery/awesome-multi-task-learning)
+
 [Goemotion Google Data and Baseline Model](https://github.com/google-research/google-research/tree/master/goemotions)
