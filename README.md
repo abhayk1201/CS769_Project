@@ -33,12 +33,29 @@ wget -P data/full_dataset/ https://storage.googleapis.com/gresearch/goemotions/d
 ## Geomotion Data Hierarchial grouping
  * **Original GoEmotions** (27 emotions + neutral)
  * **Sentiment Grouping** (positive, negative, ambiguous + neutral)
- * **Ekman** (anger, disgust, fear, joy, sadness, surprise + neutral)
- anger : anger, annoyance, disapproval, 
- disgust : disgust,
- fear : fear, nervousness, 
- joy : all positive emotions, 
- sadness : sadness, disappointment, embarrassment, grief, remorse 
- surprise : all ambiguous emotions
+ * **Ekman** (anger, disgust, fear, joy, sadness, surprise + neutral), where
+ **anger** : *anger, annoyance, disapproval*, 
+ **disgust** : *disgust*,
+ **fear** : *fear, nervousness*, 
+ **joy** : *all positive emotions*, 
+ **sadness** : *sadness, disappointment, embarrassment, grief, remorse* 
+ **surprise** : *all ambiguous emotions*
 
 `Config` directory has the respecttive config files for above groupings/taxonomy.
+
+## Running instructions
+Change corresponding `Config`/{}.json file for the required taxonomy and pass the grouping/taxonomy as an argument like.
+You can set `do_train`, `do_eval` depending on whether you want training, evaluation or both. You can also change different hyperparameters like `train_batch_size`, `learning_rate`, `num_train_epochs` etc.
+
+```bash
+$ python3 run_goemotions.py --taxonomy {$TAXONOMY}
+
+$ python3 run_goemotions.py --taxonomy original
+$ python3 run_goemotions.py --taxonomy sentiment
+$ python3 run_goemotions.py --taxonomy ekman
+```
+
+
+## References
+[Awesome Multi-Task Learning](https://github.com/Manchery/awesome-multi-task-learning)
+[Goemotion Google Data and Baseline Model](https://github.com/google-research/google-research/tree/master/goemotions)
