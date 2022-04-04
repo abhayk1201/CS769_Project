@@ -48,11 +48,11 @@ Change corresponding `Config`/{}.json file for the required taxonomy and pass th
 You can set `do_train`, `do_eval` depending on whether you want training, evaluation or both. You can also change different hyperparameters like `train_batch_size`, `learning_rate`, `num_train_epochs` etc.
 
 ```bash
-$ python3 run_goemotions.py --taxonomy {$TAXONOMY}
+$ python3 goemotions_classifier.py --taxonomy {$TAXONOMY}
 
-$ python3 run_goemotions.py --taxonomy original
-$ python3 run_goemotions.py --taxonomy sentiment
-$ python3 run_goemotions.py --taxonomy ekman
+$ python3 goemotions_classifier.py --taxonomy original
+$ python3 goemotions_classifier.py --taxonomy sentiment
+$ python3 goemotions_classifier.py --taxonomy ekman
 ```
 
 
