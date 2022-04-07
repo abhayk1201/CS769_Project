@@ -234,7 +234,6 @@ def main(cli_args):
     tokenizer = BertTokenizer.from_pretrained(
         args.tokenizer_name_or_path,
     )
-    breakpoint()
     model = BertForMultiLabelClassification.from_pretrained(
         args.model_name_or_path,
         config=config
