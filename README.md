@@ -17,8 +17,9 @@ pytorch
 
 
 
-### Goemotion Data
+## Goemotion Data
 **GoEmotions** is a corpus extracted from Reddit with human annotations to 28 emotion labels (27 emotion categories + Neutral). 
+* Processed data is already uploaded to `data` folder in this repository for convenience, you can skip the following steps.
 * [Goemotion Dataset Link](https://github.com/google-research/google-research/tree/master/goemotions/data)
 * Dataset splits: training dataset (43,410), test dataset (5,427), and validation dataset (5,426).
 * Maximum sequence length in training and evaluation datasets: 30
@@ -46,7 +47,7 @@ wget -P data/full_dataset/ https://storage.googleapis.com/gresearch/goemotions/d
 
 `Config` directory has the respecttive config files for above groupings/taxonomy.
 
-## Single Task Running instructions
+### Single Task (Goemotion) Running instructions
 Change corresponding `Config`/{}.json file for the required taxonomy and pass the grouping/taxonomy as an argument like.
 You can set `do_train`, `do_eval` depending on whether you want training, evaluation or both. You can also change different hyperparameters like `train_batch_size`, `learning_rate`, `num_train_epochs` etc.
 
@@ -57,6 +58,13 @@ $ python3 goemotions_classifier.py --taxonomy original
 $ python3 goemotions_classifier.py --taxonomy sentiment
 $ python3 goemotions_classifier.py --taxonomy ekman
 ```
+
+## Sentiment140 Data
+* [Dataset download link](http://help.sentiment140.com/for-students)
+
+
+## Suicide and Depression Detection Data
+* [Dataset download link](https://www.kaggle.com/datasets/nikhileswarkomati/suicide-watch)
 
 ## Multi-task Learning Running instructions
 
@@ -110,5 +118,8 @@ training dataset size for  <img src="https://render.githubusercontent.com/render
 
 ## References
 [Awesome Multi-Task Learning](https://github.com/Manchery/awesome-multi-task-learning)
+
+[BERT and PALs: Projected Attention Layers for
+Efficient Adaptation in Multi-Task Learning](https://github.com/AsaCooperStickland/Bert-n-Pals)
 
 [Goemotion Google Data and Baseline Model](https://github.com/google-research/google-research/tree/master/goemotions)
