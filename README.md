@@ -61,6 +61,8 @@ $ python3 goemotions_classifier.py --taxonomy ekman
 
 ## Sentiment140 Data
 * [Dataset download link](http://help.sentiment140.com/for-students)
+* Train set: Total of 1,600,000 training tweets (800,000 tweets with positive sentiment, and 800,000 tweets with negative sentiment).
+* Test set: Composed of 177 negative sentiment tweets and 182 positive sentiment tweets.
 
 
 ## Suicide and Depression Detection Data
@@ -104,7 +106,7 @@ Note the different arguments:
   * `prop`: Select a batch of examples from task i with probability <img src="https://render.githubusercontent.com/render/math?math=p_i"> at each training step, where <img src="https://render.githubusercontent.com/render/math?math=p_i">  proportional to <img src="https://render.githubusercontent.com/render/math?math=N_i">, the
 training dataset size for  <img src="https://render.githubusercontent.com/render/math?math=i^{th}"> task.
   * `sqrt`: Similar as `prop`, but sampling is proportional to the square root of the training dataset size.
-  * `anneal`: ‘annealed sampling’ method changes the proportion with each epoch so as to become more more equally towards the end of training (where we are most concerned about interference). 
+  * `anneal`: *annealed sampling* method changes the proportion with each epoch so as to become more more equally towards the end of training (where we are most concerned about interference). 
 * max_seq_length: The maximum total input sequence length after WordPiece tokenization. Otherwise, it will be trucated or padded.
 * train_batch_size:  Batch size for training.
 * num_train_epochs:  Number of epochs of training.
