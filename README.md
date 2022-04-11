@@ -1,10 +1,14 @@
 # CS769_Project
-## BERT-MTL: Multi-Task Learning Paradigm for Improved Emotion Detection using BERT Model
+## BERT-MTL: Multi-Task Learning Paradigm for Improved Emotion Classification using BERT Model
 
 
 Course Project for [CS769: Advanced Natural Language Processing](https://junjiehu.github.io/cs769-spring22/)
 
 Team Members: [Abhay Kumar](https://abhayk1201.github.io/), Neal B Desai, Priyavarshini Murugan
+
+**Report:** [Read-only Overleaf link](https://www.overleaf.com/read/dcxyxvjqkjsh)
+
+* [Pdf report](./report.pdf)
 
 ### Install
 If running on Google Colab, just install the python packages using
