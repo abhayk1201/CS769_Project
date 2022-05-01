@@ -1,3 +1,7 @@
+#########################################
+# CS769 Course Project Update
+# To support multi-class classification in Goemotions classification task
+#########################################
 import torch.nn as nn
 from transformers import BertPreTrainedModel, BertModel
 

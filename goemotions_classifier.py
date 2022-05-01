@@ -1,3 +1,9 @@
+#########################################
+# CS769 Course Project Update
+# MODIFICATIONS DONE: Adapted for SINGLE TASK SETTING for GoEmotions dataset for different emotion taxonomies.
+# It handles multi-class classification as expected in Goemotions classification task
+#########################################
+
 import argparse
 import json
 import logging
