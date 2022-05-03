@@ -64,7 +64,8 @@ $ python3 goemotions_classifier.py --taxonomy ekman
 ```
 
 ## Sentiment140 Data
-* [Dataset download link](http://help.sentiment140.com/for-students)
+* [Original Dataset download link](http://help.sentiment140.com/for-students)
+* We have shared the [processed dataset drive link](https://drive.google.com/drive/folders/1jUhA1NNYFo8dhfp1l66oDuPPlPGrx-qj?usp=sharing)
 * Train set: Total of 1,600,000 training tweets (800,000 tweets with positive sentiment, and 800,000 tweets with negative sentiment).
 * Test set: Composed of 177 negative sentiment tweets and 182 positive sentiment tweets.
 
