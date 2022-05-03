@@ -560,17 +560,21 @@ def main():
     if args.tasks == 'all':
         task_names =['sst', 'goemotion']
         data_dirs = ['SST-2', 'mtl_original']
+    
     elif args.tasks == 'goemotion_taxonomy':
         task_names =['goemotion_original', 'goemotion_ekman']
         data_dirs = ['mtl_original', 'mtl_ekman']
+    
     elif args.tasks == 'goemotion_twitter_sentiment':
         task_names =['goemotion_original', 'twitter_sentiment']
         data_dirs = ['mtl_original', 'twitter_sentiment']
+    
     elif args.tasks == 'single':
         task_names = ['sst', 'goemotion_original', 'goemotion_ekman', 'twitter_sentiment']
         data_dirs = ['SST-2', 'mtl_original', 'mtl_ekman', 'twitter_sentiment']
         task_names = [task_names[int(args.task_id)]]
         data_dirs = [data_dirs[int(args.task_id)]]
+    
     if task_names[0] not in processors:
         raise ValueError("Task not found: %s" % (task_name))
 
