@@ -137,3 +137,5 @@ dmypy.json
 
 cached*
 ckpt*
+
+data/kagglesuicide/*
