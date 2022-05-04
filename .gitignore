@@ -138,4 +138,5 @@ dmypy.json
 cached*
 ckpt*
 
-data/kagglesuicide/*
+data/kagglesuicide/trn.tsv
+data/kagglesuicide/Suicide_Detection.csv
