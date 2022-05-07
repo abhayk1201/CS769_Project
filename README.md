@@ -19,7 +19,12 @@ python 3.7
 pytorch
 `setup.sh` will install the `goemotion` environment with required python packages.
 
+### Colab notebooks
+These are some colab notebooks for easy-to-run experiments. However, for detailed experimental setup, follow the instructions in the following sections.
 
+* [Goemotions single task learning for original, ekman and sentiment taxonomies, uncased vs case bert experiments](./colab_notebooks/CS769_Single_Task_Goemotions.ipynb)
+* [Multi-task setting experiments colab notebook](./colab_notebooks/CS769_Hw3_MTL_pytorch.ipynb)
+* [Data preparation (twitter sentiments140) colab notebook](./colab_notebooks/CS769_Data_preparation.ipynb)
 
 ## Goemotion Data
 **GoEmotions** is a corpus extracted from Reddit with human annotations to 28 emotion labels (27 emotion categories + Neutral). 
@@ -68,6 +73,7 @@ $ python3 goemotions_classifier.py --taxonomy ekman
 * We have shared the [processed dataset drive link](https://drive.google.com/drive/folders/1jUhA1NNYFo8dhfp1l66oDuPPlPGrx-qj?usp=sharing)
 * Train set: Total of 1,600,000 training tweets (800,000 tweets with positive sentiment, and 800,000 tweets with negative sentiment).
 * Test set: Composed of 177 negative sentiment tweets and 182 positive sentiment tweets.
+* [Data preparation colab notebook](./colab_notebooks/CS769_Data_preparation.ipynb)
 
 
 ## Suicide and Depression Detection Data
