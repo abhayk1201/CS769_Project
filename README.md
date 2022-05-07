@@ -4,11 +4,15 @@
 
 Course Project for [CS769: Advanced Natural Language Processing](https://junjiehu.github.io/cs769-spring22/)
 
-Team Members: [Abhay Kumar](https://abhayk1201.github.io/), Neal B Desai, Priyavarshini Murugan
+**Team Members: Team #8** 
+* [Abhay Kumar](https://abhayk1201.github.io/), 
+* Neal B Desai, 
+* Priyavarshini Murugan
 
-**Report:** [Read-only Overleaf link](https://www.overleaf.com/read/dcxyxvjqkjsh)
-
+**Report:** 
+* [Read-only overleaf link](https://www.overleaf.com/read/dcxyxvjqkjsh)
 * [Pdf report](./report.pdf)
+* [Presentation](./presentation.pdf)
 
 ### Install
 If running on Google Colab, just install the python packages using
@@ -23,8 +27,11 @@ pytorch
 These are some colab notebooks for easy-to-run experiments. However, for detailed experimental setup, follow the instructions in the following sections.
 
 * [Goemotions single task learning for original, ekman and sentiment taxonomies, uncased vs case bert experiments](./colab_notebooks/CS769_Single_Task_Goemotions.ipynb)
-* [Multi-task setting experiments colab notebook](./colab_notebooks/CS769_Hw3_MTL_pytorch.ipynb)
+* [Multi-task setting experiments colab notebook](./colab_notebooks/CS769_MTL_Multi_class.ipynb)
+* [Additional Multi-task setting experiments](./colab_notebooks/CS769_Hw3_MTL_pytorch.ipynb)
 * [Data preparation (twitter sentiments140) colab notebook](./colab_notebooks/CS769_Data_preparation.ipynb)
+* [SST-2 single task learning setting](./colab_notebooks/CS769_SST2_Single.ipynb)
+
 
 ## Goemotion Data
 **GoEmotions** is a corpus extracted from Reddit with human annotations to 28 emotion labels (27 emotion categories + Neutral). 
@@ -56,7 +63,7 @@ wget -P data/full_dataset/ https://storage.googleapis.com/gresearch/goemotions/d
 
 `Config` directory has the respecttive config files for above groupings/taxonomy.
 
-### Single Task (Goemotion) Running instructions
+# Single Task (Goemotion) Running instructions
 Change corresponding `Config`/{}.json file for the required taxonomy and pass the grouping/taxonomy as an argument like.
 You can set `do_train`, `do_eval` depending on whether you want training, evaluation or both. You can also change different hyperparameters like `train_batch_size`, `learning_rate`, `num_train_epochs` etc.
 
@@ -66,6 +73,11 @@ $ python3 goemotions_classifier.py --taxonomy {$TAXONOMY}
 $ python3 goemotions_classifier.py --taxonomy original
 $ python3 goemotions_classifier.py --taxonomy sentiment
 $ python3 goemotions_classifier.py --taxonomy ekman
+```
+
+To run following tasks in single task setting, just add the corresponding `Config`/{}.json file and run that as the taxonomy.
+```bash
+$ python3 goemotions_classifier.py --taxonomy {$TAXONOMY}
 ```
 
 ## Sentiment140 Data
@@ -79,7 +91,7 @@ $ python3 goemotions_classifier.py --taxonomy ekman
 ## Suicide and Depression Detection Data
 * [Dataset download link](https://www.kaggle.com/datasets/nikhileswarkomati/suicide-watch)
 
-## Multi-task Learning Running instructions
+# Multi-task Learning Running (MTL) instructions
 
 
 **Setup**: Download the pretrained BERT pytorch model from [google drive link](https://drive.google.com/drive/folders/1xPDf-ZCNJG96-awfiYbU_nS5PCA3dj2r?usp=sharing). You should skip the next step if you download this pytorch pre-trained model. We have already shared google drive link after doing the conversion.
@@ -92,17 +104,17 @@ If you are running in google colb, modify your path variables as per your setup 
 ```bash
 python run_multi_task.py \
   --seed 42 \
-  --output_dir /content/drive/MyDrive/769/assignment3/Bert-Multi-Task2/Tmp_Model/MTL \
+  --output_dir ./Model/MTL \
   --tasks all \
   --sample 'anneal'\
   --multi \
   --do_train \
   --do_eval \
   --do_lower_case \
-  --data_dir /content/drive/MyDrive/769/assignment3/Bert-Multi-Task2/data/ \
-  --vocab_file /content/drive/MyDrive/769/assignment3/Bert-Multi-Task2/uncased_L-12_H-768_A-12/vocab.txt \
-  --bert_config_file /content/drive/MyDrive/769/assignment3/Bert-Multi-Task2/config/pals_config.json \
-  --init_checkpoint /content/drive/MyDrive/769/assignment3/Bert-Multi-Task2/uncased_L-12_H-768_A-12/pytorch_model.bin \
+  --data_dir ./data/ \
+  --vocab_file ./uncased_L-12_H-768_A-12/vocab.txt \
+  --bert_config_file ./config/pals_config.json \
+  --init_checkpoint ./uncased_L-12_H-768_A-12/pytorch_model.bin \
   --max_seq_length 50 \
   --train_batch_size 32 \
   --learning_rate 2e-5 \
@@ -127,6 +139,8 @@ training dataset size for  <img src="https://render.githubusercontent.com/render
 * vocab_file: Directory path of pretrained model downloaded from google drive link in the setup above.
 * init_checkpoint: Directory path of pretrained model downloaded from google drive link in the setup above.
 * bert_config_file: Differnt configs for Multi Task Learning settings.
+
+Modify the `./config/pals_config.json` config file for adjusting some hyperparameters and settings. To run the different MTL experiments, you can also use the `./run.sh`. Additionally, refer to the easy-to-use [colab notebook](./colab_notebooks/CS769_MTL_Multi_class.ipynb) to refer previosuly run experiments.
 
 
 ## References
