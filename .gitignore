@@ -6,6 +6,9 @@ __pycache__/
 # Mac files
 .DS_Store
 
+#big files
+data/twitter_sentiment/train.tsv
+
 # C extensions
 *.so
 
