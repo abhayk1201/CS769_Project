@@ -5,9 +5,10 @@
 Course Project for [CS769: Advanced Natural Language Processing](https://junjiehu.github.io/cs769-spring22/)
 
 **Team Members: Team #8** 
-* [Abhay Kumar](https://abhayk1201.github.io/), 
-* Neal B Desai, 
-* Priyavarshini Murugan
+-----------------------
+* **[Abhay Kumar](https://abhayk1201.github.io/)**  (github username: abhayk1201)
+* **Neal B Desai**  (github username: nbdesai1992)
+* **Priyavarshini Murugan** (github username: PriyavarshiniM)
 
 **Report:** 
 * [Read-only overleaf link](https://www.overleaf.com/read/dcxyxvjqkjsh)
