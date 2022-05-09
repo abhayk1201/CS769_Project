@@ -516,6 +516,7 @@ def main():
         "sst": SSTProcessor,
         "goemotion" : GoemotionProcessor,
         "goemotion_original": GoemotionProcessor,
+        "goemotion_sentiment": GoemotionProcessor,
         "goemotion_ekman" : GoemotionProcessor_ekman,
         "twitter_sentiment": twitter_sentimentProcessor
     }
@@ -568,6 +569,15 @@ def main():
     elif args.tasks == 'goemotion_twitter_sentiment':
         task_names =['goemotion_original', 'twitter_sentiment']
         data_dirs = ['mtl_original', 'twitter_sentiment']
+    
+    elif args.tasks == 'goemotion_original_ekman_transfer_learning':
+        task_names =['goemotion_original', 'goemotion_ekman']
+        data_dirs = ['mtl_original', 'mtl_ekman_TL']
+
+    elif args.tasks == 'goemotion_original_ekman_transfer_learning_2':
+        task_names =['goemotion_original', 'goemotion_ekman']
+        data_dirs = ['mtl_original', 'mtl_ekman_TL_2']
+    
     
     elif args.tasks == 'single':
         task_names = ['sst', 'goemotion_original', 'goemotion_ekman', 'twitter_sentiment']
