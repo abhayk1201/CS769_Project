@@ -32,6 +32,7 @@ These are some colab notebooks for easy-to-run experiments. However, for detaile
 * [Additional Multi-task setting experiments](./colab_notebooks/CS769_Hw3_MTL_pytorch.ipynb)
 * [Data preparation (twitter sentiments140) colab notebook](./colab_notebooks/CS769_Data_preparation.ipynb)
 * [SST-2 single task learning setting](./colab_notebooks/CS769_SST2_Single.ipynb)
+* [Transfer Learning Experiments](./colab_notebooks/CS769_Transfer_Learning_Exps.ipynb)
 
 
 ## Goemotion Data
